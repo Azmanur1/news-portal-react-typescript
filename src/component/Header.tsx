@@ -1,4 +1,5 @@
 import React from 'react';
+import { NavLink } from 'react-router-dom';
 
 const Header: React.FC = () => {
   return (
@@ -7,10 +8,56 @@ const Header: React.FC = () => {
         <h1 className="text-2xl font-bold">News Portal</h1>
         <nav>
           <ul className="flex space-x-6">
-            <li><a href="#" className="hover:text-gray-200 transition-colors">Home</a></li>
-            <li><a href="#" className="hover:text-gray-200 transition-colors">World</a></li>
-            <li><a href="#" className="hover:text-gray-200 transition-colors">Technology</a></li>
-            <li><a href="#" className="hover:text-gray-200 transition-colors">Sports</a></li>
+            <li>
+              <NavLink
+                to="/"
+                className={({ isActive }) =>
+                  isActive ? 'text-yellow-300 font-semibold' : 'hover:text-gray-200 transition-colors'
+                }
+              >
+                Home
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/world"
+                className={({ isActive }) =>
+                  isActive ? 'text-yellow-300 font-semibold' : 'hover:text-gray-200 transition-colors'
+                }
+              >
+                World
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/economy"
+                className={({ isActive }) =>
+                  isActive ? 'text-yellow-300 font-semibold' : 'hover:text-gray-200 transition-colors'
+                }
+              >
+                Economy
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/technology"
+                className={({ isActive }) =>
+                  isActive ? 'text-yellow-300 font-semibold' : 'hover:text-gray-200 transition-colors'
+                }
+              >
+                Technology
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                to="/sports"
+                className={({ isActive }) =>
+                  isActive ? 'text-yellow-300 font-semibold' : 'hover:text-gray-200 transition-colors'
+                }
+              >
+                Sports
+              </NavLink>
+            </li>
           </ul>
         </nav>
       </div>
